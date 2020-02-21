@@ -1,0 +1,13 @@
+<view class='feedback'>
+<!-- 当点击 form 表单中 form-type 为 submit 的 button 组件时，会将表单组件中的 value 值进行提交，需要在表单组件中加上 name 来作为 key。
+携带 form 中的数据触发 submit 事件，event.detail = {value : {'name': 'value'} , formId: ''} -->
+  <form bindsubmit="formSubmit">
+    <text>您的称呼：</text>
+    <input placeholder='请输入你的姓名' name="users"></input>
+    <text>联系方式：</text>
+    <input placeholder='请输入你的电话或电子邮箱' name="numbers"></input>
+    <text>反馈内容：</text>
+    <textarea name="textarea" ></textarea>
+    <button form-type="submit"> 提交 </button>
+  </form>
+</view>

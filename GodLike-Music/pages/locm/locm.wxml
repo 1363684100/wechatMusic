@@ -1,0 +1,46 @@
+<!--pages/lcm/lcm.wxml-->
+<view class='View_all'>
+  <view class='V1'>
+      <view class="Swiper-tab">
+        <view class="Swiper-tab-list {{currentTab==0 ? 'On' : ''}}" data-current="0" bindtap="swichNav">歌曲</view>
+        <view class="Swiper-tab-list {{currentTab==1 ? 'On' : ''}}" data-current="1" bindtap="swichNav">歌手</view>
+        <view class="Swiper-tab-list {{currentTab==2 ? 'On' : ''}}" data-current="2" bindtap="swichNav">歌单</view>
+      </view>
+      <swiper current="{{currentTab}}" class="Swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+      <!--歌曲-->
+        <swiper-item>
+        <view class='V1_swi1'>
+          <view class='V1_seachin'>
+            <i class='iconfont icon-search' /><input placeholder='本地歌曲搜索'/>
+          </view>
+          <view class='List' wx:for='{{jslist}}'>
+            <view class='Hang' >
+              <view class='Hangimg' bindtap='tzbf'><image class='Img' src='{{item.page}}'/></view>
+              <view class='Hangifm' bindtap='tzbf'><view>{{item.mname}}</view><view>{{item.songer}}</view></view>
+              <view class='Hangmore'><i class='iconfont icon-gengduo1' bindtap='tzbf' /></view>
+            </view>
+          </view>
+        </view>
+        </swiper-item>
+        <!--歌手-->
+        <swiper-item>
+        <view class='V1_swi1'>
+          <view  class='V1_seachin'>
+            <i class='iconfont icon-search' /><input placeholder='本地歌手搜索'/>
+          </view>
+          <view class='List' wx:for='{{jslist}}'>
+            <view class='Hang'>
+              <view class='Hangimg'><image class='Img Img_gs' src='{{item.songerimg}}' /></view>
+              <view class='Hangifm'><view>{{item.songer}}</view><view class='Xinxi'>{{num}}首</view></view>
+              <view class='Hangmore'><i class='iconfont icon-gengduo1' bindtap='' /></view>
+            </view>
+          </view>
+        </view>
+        </swiper-item>
+        <!--歌单-->
+        <swiper-item>
+        <view>3</view>
+        </swiper-item>
+      </swiper>
+  </view>
+</view>

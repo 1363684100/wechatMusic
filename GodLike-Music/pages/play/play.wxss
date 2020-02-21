@@ -1,0 +1,178 @@
+@import "./fonts/fonts.wxss"; 
+image {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.autopaly-body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color:rgb(15, 15, 15);
+}
+.backgroun-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgb(201, 197, 197);
+  -webkit-background-color: rgba(0, 0, 0, .8);
+}
+.backgroun-img image{
+  width: 100%;
+  height: 100%;
+  filter: blur(60rpx);
+  -webkit-filter: blur(60rpx);  
+}
+.title-container {
+  text-align: center;
+  padding: 40rpx 0;
+}
+.title-container .title {
+  display: block;
+  padding: 20rpx 0;  
+}
+.title-container .dir {
+  font-size: 28rpx;
+}
+/* 动画 */
+.playImg-box {
+  text-align: center;
+  margin: 0 auto;
+  width: 500rpx;
+  height: 500rpx;
+  border-radius:50%; 
+  overflow: hidden;
+  border: 20rpx solid rgba(34, 32, 32, 0.1);
+}
+/* 播放 */
+.animate{
+  animation: rotate 30s infinite linear;
+  -webkit-animation: rotate 30s infinite linear;
+}
+.try-box {
+  text-align: center;
+  padding: 40rpx 0;
+}
+.try{
+  font-size: 30rpx;
+  color: #111111;
+}
+.paly-ctrl .line-box {
+  display: flex;
+  text-align: center;
+  font-size: 28rpx;
+  padding: 0 50rpx;
+}
+.paly-ctrl .line-box .star-timer {
+  flex: 1;
+}
+.paly-ctrl .line-box .line {
+  width: 280rpx;
+  height: 5rpx;
+  border-radius: 10rpx;
+  background-color: #ccc;
+  flex: 5;
+  margin: 16rpx 0;
+  position: relative;
+}
+.paly-ctrl .line-box .line i{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:#ff3232;
+  height: 100%;
+  border-radius:10rpx;
+}
+.paly-ctrl .line-box .end-timer {
+  flex: 1;
+}
+.ctrl {
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 50rpx;
+  position: absolute;
+  bottom: 80rpx;
+}
+
+.ctrl view {
+  flex: 1;
+  font-size: 56rpx;
+  color:#ff3232;
+}
+
+
+.alert{ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500rpx;
+  height: 100rpx;
+  margin-left: -250rpx;
+  margin-top: -50rpx;
+  background-color: rgba(0,0,0,.4);
+  border-radius: 20rpx;
+  border: 1px solid #333;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  animation: alerts 5s forwards;
+  -webkit-animation: alerts 5s forwards;
+}
+
+/* loading */
+@keyframes alerts {
+  0%{
+    opacity: 1;
+    filter: alpha(opacity=100);
+    display: block;
+  }
+  100%{
+    opacity: 0;
+    filter: alpha(opacity=0);
+    display: none;
+  }
+}
+@-webkit-keyframes alerts {
+  0%{
+    -webkit-opacity: 1;
+    -webkit-filter: alpha(opacity=100);
+    display: block;
+  }
+  100%{
+    -webkit-opacity: 0;
+    -webkit-filter: alpha(opacity=0);
+    display: none;
+  }
+}
+
+/* 播放 : 圆形图片360度不停旋转 */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+} 

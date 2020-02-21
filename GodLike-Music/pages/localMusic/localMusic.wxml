@@ -1,0 +1,61 @@
+<!--pages/localMusic/localMusic.wxml-->
+<swiper current='{{curT}}' class='swi' indicator-dots="true" bindchange="bindchange" duration='100'>
+<!--歌曲信息-->
+<swiper-item>
+  <view>歌曲信息</view>
+</swiper-item>
+<!--歌曲播放-->
+<swiper-item>
+<view class='v_all'>
+<!--歌词 和 专辑图片-->
+  <view class='v_1'>
+    <view class='v_1img'>
+     <image class='img1' src='https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3548692647,3088044704&fm=58&bpow=580&bpoh=580' />
+    </view>
+  </view>
+<!--歌名-->
+  <view class='v_3'>
+    <view class='v_3gm'>{{mname}}</view>
+    <view class='v_3rm'>{{songer}}</view>
+  </view>
+<!--进度条-->
+  <view class='v_sli'>
+  <view><slider class='sli' bindchange='sliderChange' activeColor='red' block-size="12" value='{{audioTime}}' /></view>
+  <view class='v_time'>{{showTime1}}/{{showTime2}}</view>
+  </view>
+<!--控制按键-->
+  <view class='btn_a'>
+    <view>
+      <view><i class='iconfont icon-icon--1' wx:if="{{issort==false}}" bindtap='suiji'></i></view>
+      <view><i class='iconfont icon-xunhuanbofang' wx:if="{{issort==true}}" bindtap='notsj'></i></view>
+    </view>
+    <view><i class='iconfont icon-shangyishou' bindtap='back'></i></view>
+    <view>
+      <view><i class="iconfont icon-bofanganniu" wx:if="{{isplay==false}}" bindtap='play'></i></view>
+      <view><i class="iconfont icon-zanting" wx:if="{{isplay==true}}" bindtap='stop'></i></view>
+    </view>
+      <view><i class='iconfont icon-xiayishou' bindtap='next'></i></view>
+    <view>
+      <view><i class='iconfont icon-xihuan1' wx:if="{{islike==false}}" bindtap='like'></i></view>
+      <view><i class='iconfont icon-xihuan' wx:if="{{islike==true}}" bindtap='unlike'></i></view>
+    </view>
+  </view>
+  <view class='btn_a'>
+    <view><i class='iconfont icon-download' bindtap='waitT'></i></view>
+    <view><i class='iconfont icon-pinglun' bindtap='swichSwi' data-current='2'></i></view>
+    <view><i class='iconfont icon-icon--' bindtap='actionSheetTap'></i></view>
+    <view><i class='iconfont icon-gengduo1' bindtap='more'></i></view>
+  </view>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+  <block wx:for-items="{{actionSheetItems}}">
+    <action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+  </block>
+  <action-sheet-cancel class="cancel">收起</action-sheet-cancel>
+</action-sheet>
+</swiper-item>
+<!--歌曲评论-->
+<swiper-item>
+  <view>评论</view>
+</swiper-item>
+</swiper>

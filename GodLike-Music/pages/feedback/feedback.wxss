@@ -1,0 +1,40 @@
+/* 用户反馈整个页面的样式 */
+.feedback{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0 60rpx;
+  font-size:28rpx;
+  color: red;
+}
+/* '您的称呼'与顶部之间的距离设置 */
+.feedback form {
+  display: block;
+  padding-top: 80rpx;
+}
+/* 输入及意见框样式 */
+.feedback input,textarea {
+  margin: 20rpx 0rpx;
+  padding: 5rpx 20rpx;
+  border: 1rpx solid #333;
+  border-radius: 10rpx;
+  width:100%;
+}
+/* 意见框内容样式 */
+textarea {
+  padding-top: 10rpx;
+  width:100%;
+}
+/* 提交边框样式 */
+.feedback input:focus,.feedback textarea:focus {
+  border: 1rpx solid #ffcd32;
+}
+/* 提交按钮样式 */
+.feedback button{
+  background:#ffcd32;
+  width:675rpx;
+}

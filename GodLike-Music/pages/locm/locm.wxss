@@ -1,0 +1,114 @@
+/* pages/lcm/lcm.wxss */
+@import '../../image/iconfont.wxss';
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.View_all{
+  width: 100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  border-style: solid;
+}
+.V1{
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-style: solid;
+  border-color: thistle;
+}
+.V1_swi1{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.V1_seachin{
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-width: 1rpx;
+  border-color: grey;
+  box-shadow: 1px 1px 2px 1px rgba(128, 128, 128, 0.726);
+  border-radius: 6px;
+  margin: 10px;
+}
+.Swiper-tab{
+ width: 100%;
+ border-bottom: 2rpx solid #777777;
+ text-align: center;
+ line-height: 80rpx;
+}
+.Swiper-tab-list{
+ font-size: 30rpx;
+ display: inline-block;
+ width: 20%;
+ color: #777777;
+ margin-right: 4%;
+  margin-left: 4%;
+}
+.On{
+ color: #da7c0c;
+ border-bottom: 5rpx solid #da7c0c;
+}
+.Swiper-box{
+ display: block;
+ height: 100%;
+ width: 100%;
+}
+.Swiper-box view{
+ text-align: center;
+}
+.List{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.Hang{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 89vw;
+  height: 18vw;
+  margin: 3vw 5.5vw 3vw 5.5vw;
+}
+.Hangimg{
+  width: 18vw;
+  height: 18vw;
+  border-radius: 12rpx;
+}
+.Img{
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+.Img_gs{
+  border-radius: 100rpx;
+}
+.Hangifm{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.Xinxi{
+  font-size: 28rpx;
+  font-family: '楷体';
+  color: #606263cc;
+}
+.Hangmore{
+  margin: 20rpx;
+}
+

@@ -1,0 +1,137 @@
+/* @import可看作为css样式，作用是引入css样式功能。 */
+@import "../play/fonts/fonts.wxss";
+.container-box {
+  width: 100%;
+  position: relative;
+}
+/* '随机播放全部'box样式 */
+.headerImg-box {
+  padding-top:70%; 
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/* 排行详情里'随机播放全部'后面的图片样式 */
+.filter{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* '随机播放全部边框样式' */
+.play-btn {
+  position: absolute;
+  bottom: 150rpx;
+  left: 50%;
+  margin-left: -150rpx;
+  width: 300rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border: 1px solid #1a1919;
+  border-radius: 40rpx;
+  z-index: 10;
+}
+/* '随机播放全部'字体内容样式 */
+.play-btn text{
+  font-size: 28rpx;
+  color: #141414;
+}
+/* 下面一个大box: 巅峰榜..*/
+.contentList-box {
+  margin-top: 60%;
+  width: 100%;
+  background-color:white;
+}
+/* 排名名字内容样式 */
+.contentList {
+  box-sizing: border-box;
+  padding: 30rpx 50rpx; 
+  font-size: 30rpx;
+}
+/* '巅峰榜-流行指数'样式（box及字体） */
+.list {
+  border: 0.5rpx solid #c62f2f;
+  color: white;
+  font-size: 40rpx;
+  text-align: center;
+  padding: 30rpx 0;
+  background-color: #c62f2f;
+}
+/* 歌手名字文字样式 */
+.title{
+  font-size: 30rpx;
+  color: black;
+  display: block;
+}
+/* 歌手专辑样式 */
+.detail{
+  font-size: 25rpx;
+  color: rgba(90, 88, 88, 0.952);
+}
+/* 歌手及专辑的整体设置 */
+.title,.detail{
+    /* text-overflow 属性规定当文本溢出包含元素时发生的事情。这里为隐藏，即为文本长度大于屏幕长度用省略号隐藏多余文本
+  ellipsis：显示省略符号来代表被修剪的文本。 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* 自适应布局webkit-box： */
+  display: -webkit-box;
+  /* box-orient：在父元素上设置，子元素排列，vertival:垂直属性 */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.cont-flex {
+  display: flex;
+}
+/* 排名数字样式 */
+.ph_numbers {
+  flex: 0 0 80rpx;
+  line-height: 80rpx;
+  font-size: 44rpx;
+  color: #0f0f0f;
+}
+/* 奖杯图标样式 */
+.ph_icons image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 12rpx;
+}
+/* loading这个page的样式 */
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(243, 236, 236);
+  overflow: hidden;
+}
+/* Loading转圈的图标样式 */
+.loading .icon-loading{
+  color: white;
+  font-size: 100rpx;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  margin-left:-5%; 
+  margin-top:-5%; 
+  animation: loadings 2s infinite linear;
+  color: #f55844;
+}
+/* 名字为loadingf的@keyframes，刚开始的时候图片旋转为0度，动画完成的时候图片旋转360度 */
+@keyframes loadings{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

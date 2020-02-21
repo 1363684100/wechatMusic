@@ -1,0 +1,177 @@
+
+/* 调用fonts.wxss里的样式 */
+@import "../play/fonts/fonts.wxss";
+/* 四个图标的调用地址 */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1564570537388'); /* IE9 */
+  src: url('iconfont.eot?t=1564570537388#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAVgAAsAAAAACgwAAAURAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDIgqHOIYZATYCJAMUCwwABCAFhG0HShuXCFFUTcpkH4mx22gIQzQqlcKecMybEKI1MrP0CAoAPbTVgIpAofBlVSHra0z1C1lh2Iibnm31DzBqs9nKNrYK0DVwkItq0MsKWK9/ZHhwOf1va2DzrLbLHFvLAkwwoL19gYTpAMRUorO5SS94lwn0m5MAulLVoAQSBacO1L3UEYNAYrMoIeTQq28+G8ttaCWoetMX+CEAvqq/j/8gLSQkNeOuuv6icgSU/Ar9PB6Z6ZgJ7uVZ4F1+Lly3kbEDKMQTX889iK7aUTX9frwCB4CmqFNeIUcHAMPESj66VlNVwh+vEA2nGQT+TF16SyoyCX7FiuD1Kw5MMr/iZTNEU9n0fowBMQ9AfCPDTJ6HVEkbFwrmK9wUvt7uoX7Obq7cHd2nqK2LPWnGU8ns89HYfCbYZpmVGkJVrNaoep2t+2cd8HFZsm9vFDlGpFl20hKeNJNT9gkDlTyvsts1Y2M04y2p1MYRtl3r1nre5Xi+ll3nyeyctHi3p3Mxp8Tt9m/2sduX8Sp2497JVm/rep8Xds2efZv2RnBcCzNpsffQwM7T3usDutWfoRsO+Ax3H1gS2znI7suqRNm57uJk1eW4Do1tiZeqy7rBRzNk3e3d1cHs9OwvUFSDVvnYx2ruQ2Wn7KKCLneQn3oWBG98mtF18ykKtj2rlC+xQcgsq2yS7PTzYGTLi2x5gvMAx3UtZgA8k5XL77wIh7Y/r9LKWvtycrvdx7Zn3zrPtVw2Zbl8eV3gOqFovF/iN8n4T9/FbJ0gFq8LzPrrXEj4SYOBYR6wbFsry7gcfH/Vzd/t6gfuyckoOLe9BszLIoisuWuy5ilCw7xm7gOZh8wVorh20UR4yxZYUk66qCZeyFu3wnffusWlvaWtO8RoBQNari6oiPn9i/9n/EHmGuUzGgZu/fpdcX5x2kdqiVDV2HpH9fEdGnDhx3ngYGfvZ8MCQYi3uQDRFSX4j2cvhlw8xNYrZa6zU2PdqiRTS+ANIP3Hmc6nnZYplvmq3/+Sm5bwij9v2mz5OTF+nltguWK+W0L8z5bD0/e/5tMTcr1TjmNP7q+bFJQS4lh4KvDW//OTgxIXrXt8Pyj2mWWyZwbCD+zpfwZ497jZr3ashEgoC/Xi6sQt4OIQzIzgAgMSnsFNkFYLNY0KQmVpEwQ9ChPFCsMGAKsDoyIF7vkujvtIkvmTNbWECeOEYS2xrS1rwmxi+H0T8q7ow4ig8A+hrZLjGwKWnpxVP7X1/lHwFkB3GJmFFDg41wzB/O0r9V83TZB6w8WETramoN+l4DeJfJ3EfxLMPlUSD+Wq6ZWILd0CTYUPQRyKj5yz1vJyKR/CsvWO/wqfJqt6bDtLJfTzAToExr3PRzcVW2MD102ZkPSYhazXClrwO1ANOIGm1yn021a9fcAECiJKH7bMIwijjkAy7Adkox6hBf8OqmnfQTMaCPS7Gx4HDlgLnaycwgZpbAQdmoTqhkkTLthpmVbfhhHjDIOUVa5S1Bhl0cXR1KQUZ74aM2FUHkss44k0msZRnCKNaBVdhxkMJGqmyFFsmE7S0rQ5LzkZ93tS0jBpBDKXUTCDaJgRqCGToHSGkUxwuTdN5vp+GwxhHINBVEjbt6AahmKh6x+VKklKDLRaY4rVti7DLcYjpKHR8NM0HIVkhKqCC2PgMySU2X/cKMwwWhJtipRZnmTWDY+rSSpfZ5zG0r9BR250jRQ5StRoas9bEkWyNvWCS3OnAwAAAAA=') format('woff2'),
+  url('iconfont.woff?t=1564570537388') format('woff'),
+  url('iconfont.ttf?t=1564570537388') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1564570537388#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  /* 首先执行，类似权重 */
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  /* antialiased：抗锯齿很好 */
+  -webkit-font-smoothing: antialiased;
+  /* 字体抗锯齿属性:使字体更清晰*/
+  -moz-osx-font-smoothing: grayscale;
+}
+/*  */
+.icon-icon-:before {
+  content: "\e621";
+}
+
+.icon-icon-1:before {
+  content: "\e629";
+}
+
+.icon-icon-2:before {
+  content: "\e62a";
+}
+
+.icon-icon-3:before {
+  content: "\e62b";
+}
+
+/* '我的'整个界面 */
+.about-page {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(247, 241, 241);
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+/* 微信名及微信头像的box样式 */
+.about-header {
+  display: flex;
+  margin: 40rpx 0;
+  position: relative;
+}
+/* 微信名样式 */
+.about-header .about-userName {
+  font-size: 48rpx;
+  color: rgb(0, 0, 0);
+  flex: 1;
+  margin-top:40rpx; 
+}
+/* 微信头像样式 */
+.about-header .about-userImg {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #333;
+} 
+.userbtn {
+  position: absolute;
+  top: 20rpx;
+  left: 310rpx;  
+  font-size: 20rpx;
+  color: #ccc;
+  background-color: transparent;
+  line-height: 40rpx;
+  padding: 0 6rpx;
+  border: 1px solid #ccc;
+  border-radius: 14rpx;
+}
+.aboutMe {
+  width: 100%;
+  background-color: #ccc2c2;
+  color: rgb(0, 0, 0);
+  font-size: 35rpx;
+  box-sizing: border-box;
+  padding: 40rpx;
+  border-radius: 10rpx; 
+}
+.aboutMe .aboutMe-title {
+  font-size: 42rpx;
+  display:block;
+  padding: 20rpx 0;
+}
+.like-box {
+  line-height: 90rpx;
+  display: flex;
+}
+.like .icon-icon-,.icon-icon-1,.icon-icon-2,.icon-icon-3{
+  margin-right:30rpx; 
+  font-size: 34rpx;
+}
+.like .like-line {
+  flex: 2;
+}
+.right {
+  float: right;
+  font-size: 68rpx;
+  color: #888;
+}
+.bottom-line,.right-line{
+  border-bottom: 1px solid #444;
+}
+.dir {
+  margin-top:80rpx; 
+}
+
+
+
+view{
+    box-sizing: border-box;
+}
+
+
+
+.item-box{
+    width: 100%;
+    margin: 0 auto;
+    padding:40rpx 0;
+}
+
+
+
+.items{
+    width: 100%;
+}
+.item{
+    position: relative;
+    border-top: 2rpx solid #eee;
+    height: 120rpx;
+    line-height: 120rpx;
+    overflow: hidden;
+     
+}
+.item:last-child{
+    border-bottom: 2rpx solid #eee;
+}
+.inner{
+    position: absolute;
+    top:0;
+}
+.inner.txt{
+    background-color: #fff;
+    width: 100%;
+    z-index: 5;
+    padding:0 10rpx;
+    transition: left 0.2s ease-in-out;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.inner.del{
+    background-color: #e64340;
+    width: 180rpx;text-align: center;
+    z-index: 4;
+    right: 0;
+    color: #fff
+}
+.item-icon{
+    width: 64rpx;
+    vertical-align: middle;
+    margin-right: 16rpx
+}

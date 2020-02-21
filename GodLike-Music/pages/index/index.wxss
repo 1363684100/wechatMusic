@@ -1,0 +1,308 @@
+@import "../play/fonts/fonts.wxss";
+.body {
+  background-color: #C62F2F;
+  font: 400 30rpx/30rpx Microsoft YaHei;
+}
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index:999;
+  background-color: white;
+  display: flex;
+}
+.navbar .nav {
+  justify-content: center;
+  line-height: 80rpx;
+  text-align: center;
+  color: #222;
+  flex: 1;
+}
+.active {
+  color: #ffcd32;
+  padding: 2px 0;
+  border-bottom: 2px solid #ffcd32;
+}
+.main-container {
+  margin-top: 80rpx;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+.bannerImgBox image {
+  width: 100%;
+  height: 300rpx;
+}
+.content-box {
+  background-color: #C62F2F;
+  font-size: 30rpx;
+  color:#f7e651;
+  
+}
+.content-box .title {
+  padding: 30rpx 0rpx;
+}
+
+
+
+/* <!--音乐馆列表样式--> */
+.list-box1 {
+  background-color: #C62F2F;
+  width: 42%;
+  overflow: hidden;
+  border: 0.5rpx solid #ADADAD;
+  border-radius: 20rpx;
+  padding: 30rpx 20rpx;
+  display: inline-flex;
+}
+/* 歌手页面样式 */
+.list-box {
+  background-color: #C62F2F;
+  width: 100%;
+  overflow: hidden;
+  border: 0.5rpx solid #222;
+  border-radius: 20rpx;
+  padding: 30rpx 20rpx;
+  display: flex;
+}
+.img-box{
+  flex: 1;
+  vertical-align: middle;
+  width: 180rpx;
+  height: 180rpx;
+}
+.singer-box{
+  flex: 1;
+  vertical-align: middle;
+}
+.singer-box view{
+  margin-left: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.singer-box view image{
+  width: 100%;
+  height: 100%;
+}
+.img-box image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.title1{
+  background-color: #C62F2F;
+  color:#f7e651;
+  font-size: 35rpx; 
+  margin: 20rpx 200rpx 20rpx;
+}
+.title-content {
+  flex: 3;
+  text-align: left; 
+}
+.title-content text{
+  display: block;
+}
+.title-content .title {
+  color: #fff;
+  padding:2rpx 0;
+}
+.title-content .article {
+  color:rgb(184, 180, 180);
+  padding-top: 10rpx;
+  font-size: 24rpx;
+}
+.search-box {
+  color:hsla(0,0%,100%,.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #C62F2F;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 20rpx 50rpx;
+}
+.input-box {
+  width: 100%;
+  margin-top: 100rpx;
+  position: relative;
+}
+input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  box-sizing: border-box; 
+  height: 80rpx;
+  width: 100%;
+  padding: 0 70rpx;
+  color: rgb(14, 13, 13);
+  background-color: rgb(233, 227, 227);
+  border-radius: 10rpx;
+}
+.search-text {
+  padding: 50rpx 0;
+  color:rgb(253, 251, 251);
+}
+.search-icon {
+  position: absolute;
+  left: 18rpx;
+  top: 24rpx;
+  font-size: 40rpx;
+  color: black;
+}
+/* 热门搜索内容样式 */
+.i-text {
+  border: 1px solid;
+  color:rgb(252, 249, 249);
+  display: inline-block;
+  background-color: #C62F2F;
+  margin: 12rpx 20rpx 12rpx 0;
+  padding: 10rpx 16rpx;
+  border-radius: 8rpx;
+}
+.container-ph {
+  box-sizing: border-box;
+  padding: 30rpx 50rpx;
+}
+.ph-list-box {
+  display: flex;
+  background-color:rgb(192, 6, 6); 
+  margin-bottom:40rpx; 
+}
+.ph-img-box {
+  flex: 1;
+}
+.ph-img-box image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.content-boxs {
+  flex: 3;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.904);
+}
+.content-boxs text{
+  display: block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-height: 52rpx;
+}
+.cloes {
+  color:#222;
+  position:absolute;
+  right:22rpx;
+  top:26rpx;
+  font-size: 36rpx;
+}
+.musicList {
+  color:#fff;
+  margin-top:50rpx; 
+  width: 100%;
+  height: 74%;
+  overflow-y: scroll;
+}
+
+.musicList .musicTitle-list view {
+  margin: 20rpx 0;
+  line-height: 36rpx;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.musicList .musicTitle-list view i {
+  margin-right:16rpx; 
+}
+.nullImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -108rpx;
+  margin-top:-100rpx; 
+  text-align: center;
+}
+.nullImg image {
+  width: 200rpx;
+  height: 200rpx;
+}
+.nullImg text {
+  margin-top:30rpx; 
+  display: block;
+  color: #f3f2f1;
+}
+
+
+
+
+ .Search_btn { 
+  border: 5rpx solid #f8d167;
+  border-radius: 8rpx;
+  margin-top: 50rpx;
+  margin-left: 260rpx;
+  padding-top:10rpx;
+  padding-left: 15rpx;
+  width: 90rpx;
+  height: 45rpx;
+  font-size: 35rpx;
+  color: #f8d167;
+}
+
+
+.Search_xian {
+  margin-top: 50rpx;
+  width: 100%;
+  height: 1rpx;
+  background: #dcdcdc;
+  margin-bottom: 32rpx;
+}
+ 
+.Search_record_text>text {
+  font-size: 30rpx;
+  color: white;
+  
+}
+
+.Search_record_text>image {
+  width: 44rpx;
+  height: 44rpx;
+  vertical-align: middle;
+  float: right;
+  margin-right: 20rpx;
+}
+ 
+.History-list {
+  margin-left: 20rpx;
+  margin-top: 28rpx;
+  margin-right: 20rpx;
+}
+ 
+.History-list>text {
+  display: inline-block;
+  height: 56rpx;
+  border: 1rpx solid white;
+  border-radius: 5px;
+  background: #C62F2F;
+  max-width: 100%;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  line-height: 56rpx;
+  font-size: 30rpx;
+  color: white;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  box-sizing: border-box;
+
+}

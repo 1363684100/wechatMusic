@@ -1,0 +1,47 @@
+<view class='about-page'>
+  <view class='about-header'>
+  <!-- open-data:用于展示微信开放的数据 -->
+    <open-data class='about-userName' type="userNickName"></open-data>
+    <open-data type="userAvatarUrl" class="about-userImg"></open-data>
+  </view>
+  
+  <view class='aboutMe'>
+    <text class='aboutMe-title'>我的</text>
+    <!-- about Me -->
+    <view class='like'>
+      <view bindtap='myLike' class='like-box'>
+        <i class="icon-icon-3"></i>
+        <view class='like-line bottom-line'>
+          <text>本地音乐</text>
+        </view>
+        <i class="right icon-right right-line"></i>
+      </view>
+      <!-- 我的收藏 -->
+      <view bindtap='mySc' class='like-box'>
+        <i class="icon-icon-2"></i>
+        <view class='like-line bottom-line'>
+          <text>我的收藏</text>
+        </view>
+        <i class="right icon-right right-line"></i>
+      </view>
+      <!-- 用户反馈 -->
+    <view class='like'>
+      <view bindtap='feedback' class='like-box'>
+        <i class="icon-icon-"></i>
+        <view class='like-line bottom-line'>
+          <text>用户反馈</text>
+        </view>
+        <i class="right icon-right right-line"></i>
+      </view>
+      <!-- 关于我们 -->
+      <view bindtap='about' class='like-box'>
+        <i class="icon-icon-1"></i>
+        <view class='like-line bottom-line'>
+          <text>关于我们</text>
+        </view>
+        <i class="right icon-right right-line"></i>   
+      </view>
+    </view>
+    </view>
+  </view>
+</view>

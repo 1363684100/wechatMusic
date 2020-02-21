@@ -1,0 +1,46 @@
+<view class="autopaly-body">
+  <view class='backgroun-img'>
+    <image src='{{musicImg}}'></image>
+  </view>
+  <view class='title-container'>
+    <text class='title'>{{musicTitle}}</text>
+    <text class='dir'>{{author}}</text>
+  </view>
+  <view class='playImg-box {{!playLists ? "animate" : ""}}'>
+    <image src='{{musicImg}}'></image>
+  </view>
+  <view class='try-box'>
+    <text class='try'>歌词加载中...</text>
+  </view>
+  <view class='paly-ctrl'>
+    <view class='line-box'>
+      <text class='star-timer'>{{currentTime}}</text>
+      <view class='line'><i style="width:{{scrollLine}}px;"></i></view>
+      <text class='end-timer'>{{durations}}</text>
+    </view>
+  </view>
+  <view class='ctrl'>
+    <!-- 播放顺序 -->
+    <view>
+      <i class="icon-repeat"></i>
+    </view>
+    <!-- 快退 -->
+    <view>
+      <text bindtap='fristMusic' class='icon-rewind'></text>
+    </view>
+    <!--播放 -->
+    <view bindtap='playList'>
+      <text class='{{playLists ? "icon-play":"icon-pause"}}'></text>
+       <audio src='{{musicSrc}}'></audio>
+    </view>
+    <!-- 快进 -->
+    <view>
+      <text bindtap='nextMusic' class='icon-fast-forward'></text>
+    </view>
+    <!-- 喜欢 -->
+    <view bindtap='starList'>
+      <text class='{{starLists ? "icon-star":"icon-star1"}}'></text>
+    </view>
+  </view>
+  <view wx:if="{{!starLists}}" class='alert'>{{alertTitle}}</view>
+</view>

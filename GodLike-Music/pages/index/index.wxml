@@ -1,0 +1,119 @@
+<view class="body">
+  <!-- 导航栏 -->
+  <view class='navbar'>
+    <block wx:for="{{navBar}}" wx:key="{{index}}">
+      <view class='nav' catchtap='navBarIndex' data-index="{{index}}">
+        <text class='{{navIndex == index ? "active" : "" }}'>{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <view class='main-container'>
+    <view current='{{navIndex}}' bindanimationfinish='clickSwiper'>
+      <!-- 推荐 -->
+      <view wx:if="{{navIndex == 0}}">
+        <swiper autoplay="{{autoplay}}" circular="true" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{sliderData.slider}}" wx:key="{{index}}">
+            <swiper-item class="bannerImgBox">
+              <image src="{{item.picUrl}}" />
+            </swiper-item>
+          </block>
+        </swiper>
+          <view class='title1'>音乐馆</view>
+          <view class='content-box'>
+          <view class='list-box1' bindtap='duration' wx:for="{{recommendList}}" data-id='{{item.dissid}}' wx:key="{{index}}">
+            <view class='img-box'>
+              <image src='{{item.imgurl}}'></image>
+            </view>
+            <view class='title-content'>
+              <text class='title'>{{item.creator.name}}</text>
+              <text class='article'>{{item.dissname}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 歌手 -->
+      <view wx:if="{{navIndex == 1}}">
+        <view class='list-box' bindtap='singerList' wx:for="{{singerData}}" wx:key="{{index}}" data-singerId="{{item.Fsinger_mid}}">
+          <view class='singer-box'>
+            <view>
+              <image src='https://y.gtimg.cn/music/photo_new/T001R300x300M000{{item.Fsinger_mid}}.jpg?max_age=2592000'></image>
+            </view>
+          </view>
+          <view class='title-content'>
+            <text style='color:white;padding:36rpx 0 0 10rpx' class='title'>{{item.Fsinger_name}}</text>
+          </view>
+        </view>
+
+
+      </view>
+      <!-- 排行 -->
+      <view wx:if="{{navIndex == 2}}">
+        <view class='container-ph'>
+          <view class='ph-list-box' bindtap='ph_routers' wx:for="{{phDataList.topList}}" wx:key="{{index}}" data-id='{{item.id}}'>
+            <view class='ph-img-box'>
+              <image src='{{item.picUrl}}'></image>
+            </view>
+            <view class='content-boxs'>
+              <text wx:for="{{item.songList}}" wx:key="{{index}}">{{index + 1}} {{item.songname}} - {{item.singername}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 搜索 -->
+
+      <view class='search-box' wx:if="{{navIndex == 3}}">
+        <view class='input-box'>
+          <i class="search-icon icon-sousuo"></i>
+          <input class='input'  value='{{searchTitle}}' focus="{{name_focus}}" bindinput="putSearch" placeholder='搜索歌曲、歌手'></input>
+          <i class="icon-guanbi cloes" style='{{searchTitle ? "display:block" : "display:none"}}' bindtap="clearInputVal"></i>
+          
+          
+          <view class="Search_btn" bindtap='search'>{{SearchTextb}}</view>
+
+
+        </view>
+  <view class="Search_xian"></view>
+  <!--搜索记录盒子-->
+  <view class="Search_record_box">
+    <view class="Search_record_text">
+      <text>搜索记录</text>
+      <image bindtap='delete_list' src='../images/laji.png'></image>
+    </view>
+    <!--记录词的盒子-->
+    <view class="History_box">
+      <view class="History-list">
+        <text wx:for="{{listarr}}" data-text="{{item}}" wx:key="key" bindtap='this_value'>{{item}}</text>
+      </view>
+    </view>
+  </view>
+        <view style='{{searchTitle ? "display:none" : "display:block"}}'>
+          <view class='search-text'>热门搜索</view>
+          <view class='i-box'>
+            <text class='i-text' bindtap='addVal' wx:for="{{searchData}}" data-searchTitle="{{item.k}}" wx:key="{{index}}">{{item.k}}</text>
+          </view>
+        </view>
+        <!-- 搜索结果 -->
+        <view class='musicList' style='{{searchTitle ? "display:block" : "display:none"}}'>
+          <view class='musicTitle-list'>
+            <view 
+              bindtap='goToPlay' 
+              wx:for="{{searchBody.data.song.list}}" 
+              wx:key="index" 
+              data-musicLink="{{item.songmid}}"
+              data-musicImg="{{item.albummid}}"
+              data-name="{{item.songname}}"
+              data-zz='{{item.singer[0].name}}'
+            >
+              <i class="icon-yinle"></i>
+              <text>{{item.songname}} - {{item.singer[0].name}}</text>
+            </view>
+          </view>
+          <view class='nullImg' style='{{searchBody.message == "no results" ? "display:block" : "display:none"}}'>
+            <image src='../images/biaoqin1.jpg'></image>
+            <text>抱歉，暂无搜索结果</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

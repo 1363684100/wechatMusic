@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/abouts/abouts",
+    "pages/play/play",
+    "pages/details/details",
+    "pages/feedback/feedback",
+    "pages/mylike/mylike",
+    "pages/about/about",
+    "pages/mysc/mysc",
+    "pages/locm/locm",
+     "pages/localMusic/localMusic"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#C62F2F",
+    "navigationBarTitleText": "GODLIKE MUSIC",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#C62F2F",
+    "color": "#ccc",
+    "selectedColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "navBarImages/manage.png",
+        "selectedIconPath": "navBarImages/manage_fill.png"
+      },
+      {
+        "pagePath": "pages/play/play",
+        "text": "播放",
+        "iconPath": "navBarImages/playon.png",
+        "selectedIconPath": "navBarImages/playon_fill.png"
+      },
+      {
+        "pagePath": "pages/abouts/abouts",
+        "text": "我的",
+        "iconPath": "navBarImages/group.png",
+        "selectedIconPath": "navBarImages/group_fill.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,54 @@
+<!--pages/lcm/lcm.wxml-->
+<view class='view_all'>
+  <view class='v1'>
+      <view class="swiper-tab">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">歌曲</view>
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">歌手</view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">歌单</view>
+      </view>
+      <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+      <!--歌曲-->
+        <swiper-item>
+        <view class='v1_swi1'>
+          <view class='v1_seachin'>
+            <i class='iconfont icon-search' /><input placeholder='本地歌曲搜索'/>
+          </view>
+          <view class='list' wx:for='{{jslist}}'>
+            <view class='hang' >
+              <view class='hangimg' bindtap='tzbf'><image class='img' src='{{item.page}}'/></view>
+              <view class='hangifm' bindtap='tzbf'><view>{{item.mname}}</view><view>{{item.songer}}</view></view>
+              <view class='hangmore'><i class='iconfont icon-gengduo1' bindtap='play1' /></view>
+            </view>
+          </view>
+        </view>
+        </swiper-item>
+        <!--歌手-->
+        <swiper-item>
+        <view class='v1_swi1'>
+          <view  class='v1_seachin'>
+            <i class='iconfont icon-search' /><input placeholder='本地歌手搜索'/>
+          </view>
+          <view class='list' wx:for='{{jslist}}'>
+            <view class='hang'>
+              <view class='hangimg'><image class='img img_gs' src='{{item.songerimg}}' /></view>
+              <view class='hangifm'><view>{{item.songer}}</view><view class='xinxi'>{{num}}首</view></view>
+              <view class='hangmore'><i class='iconfont icon-gengduo1' bindtap='' /></view>
+            </view>
+          </view>
+        </view>
+        </swiper-item>
+        <!--歌单-->
+        <swiper-item>
+        <view>3</view>
+        </swiper-item>
+      </swiper>
+  </view>
+  <view class='v2'>
+    <view class='hangimg1'><image class='img1' src='{{page}}' bindtap='tzbf' /></view>
+    <view class='hangifm1'><view>{{mname}}</view><view>{{songer}}</view></view>
+    <view  class='hangmore'>
+      <view><i  class="iconfont icon-bofang" wx:if="{{isPlay==false}}" bindtap='play1'></i></view>
+      <view><i  class="iconfont icon-zanting1" wx:if="{{isPlay==true}}" bindtap='stop1'></i></view>
+    </view>
+  </view>
+</view>

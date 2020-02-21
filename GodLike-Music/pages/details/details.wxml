@@ -1,0 +1,45 @@
+<view class="container-box">
+  <view class='headerImg-box' style='background-image:url({{dirData.logo || imgUrl || phData_List.topinfo.pic_album}});'>
+    <view class='filter'></view>
+    <view class='play-btn'>
+      <text>随机播放全部</text>
+    </view>
+  </view>
+  <!-- 推荐详情 -->
+  <view class='contentList-box' style='{{dirData ? "display:block" : "display:none"}}'>
+    <view class='list'>{{dirData.dissname}}</view>
+    <view class='contentList' bindtap='playList' wx:for="{{dirData.songlist}}" data-musicSrc='{{item.strMediaMid}}' data-imgSrc='{{item.albummid}}' data-musicName="{{item.songname}}" data-ahtor='{{item.singer[0].name}}' wx:key="{{index}}">
+      <text class='title'>{{item.songname}}</text>
+      <text class='detail'>{{item.singer[0].name}}·{{item.albumname}}</text>
+    </view>
+  </view>
+  <!-- 歌手详情 -->
+  <view class='contentList-box' style='{{starData ? "display:block" : "display:none"}}'>
+    <view class='list'>{{starData.singer_name}}</view>
+    <view class='contentList' bindtap='musicGS' wx:for="{{starData.list}}" data-musicSrc='{{item.musicData.strMediaMid}}' data-imgSrc='{{item.musicData.albummid}}' data-musicName="{{item.musicData.songname}}" data-ahtor='{{item.musicData.singer[0].name}}' wx:key="{{index}}">
+      <text class='title'>{{item.musicData.songname}}</text>
+      <text class='detail'>{{item.musicData.singer[0].name}}·{{item.musicData.albumname}}</text>
+    </view>
+  </view>
+  <!-- 排行详情 -->
+  <view class='contentList-box' style='{{phData_List ? "display:block" : "display:none"}}'>
+    <view class='list'>{{phData_List.topinfo.ListName}}</view>
+    <view class='contentList cont-flex' bindtap='musicTJ' wx:for="{{phData_List.songlist}}"  data-musicSrc='{{item.data.strMediaMid}}' data-imgSrc='{{item.data.albummid}}' data-musicName="{{item.data.songname}}" data-ahtor='{{item.data.singer[0].name}}' wx:key="{{index}}">
+      <view class='ph_numbers'>
+        <view class='ph_icons'>
+          <image style="{{index == 0 ? 'display:block' : 'display:none'}}" src='{{img_one}}'></image>
+          <image style="{{index == 1 ? 'display:block' : 'display:none'}}" src='{{img_two}}'></image>
+          <image style="{{index == 2 ? 'display:block' : 'display:none'}}" src='{{img_three}}'></image>
+        </view>
+        <view style="{{index > 2 ? 'display:block' : 'display:none'}}">{{index + 1}}</view>
+      </view>
+      <view>
+        <text class='title'>{{item.data.songname}}</text>
+        <text class='detail'>{{item.data.singer[0].name}}·{{item.data.albumname}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view style='{{ phData_List || dirData || starData ? "display:none" : "display:block"}}' class='loading'>
+  <i class="icon-loading"></i>
+</view>
